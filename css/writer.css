@@ -1,3 +1,54 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+}
+
 html, body, #editor {
   height: 100%;
+}
+
+body {
+  padding-top: 65px;
+  overflow: hidden;
+}
+
+.half {
+  width: 50% !important;
+  min-width: 50% !important;
+}
+
+.pull-left {
+  float: left;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding: 11px; 15px;
+  z-index: 999;
+}
+
+.navbar .button {
+  margin-left: 15px;
+  float: right;
+}
+
+/* Editor */
+#editor .ace_content {
+  /*padding: 0 25px;*/
+  color: #555;
+}
+
+#preview {
+  width: 0%;
+  height: 100%;
+  float: right;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0px 10px;
 }

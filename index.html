@@ -33,11 +33,12 @@
 <body>
 
 <nav class="navbar">
-  <input type="text" class="document-name" name="document-name" placeholder="Document Name">
+  <input type="text" class="document-name" name="document-name" placeholder="Document name" value="Document name">
   <a href="#" class="button button-download">Download</a>
   <a href="#" class="button button-preview">Preview</a>
 </nav>
-  
+
+<div class="main">
 <div id="editor">An h1 header
 ============
 
@@ -184,10 +185,6 @@ Here's a "line block":
 |   Line too
 | Line tree
 
-and images can be specified like so:
-
-![example image](example-image.jpg "An exemplary image")
-
 Inline math equations go in like so: $\omega = d\phi / dt$. Display
 math should get its own line and be put in in double-dollarsigns:
 
@@ -196,6 +193,7 @@ $$I = \int \rho R^{2} dV$$
 And note that you can backslash-escape any punctuation characters
 which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.</div>
 <div id="preview"></div>
+</div>
 
 <script src="js/Blob.js"></script>
 <script src="js/FileSaver.min.js"></script>

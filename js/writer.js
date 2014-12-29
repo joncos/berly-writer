@@ -4,6 +4,7 @@ function initEditor(elementId) {
   editor.setTheme("ace/theme/textmate");
   editor.getSession().setMode("ace/mode/markdown");
   editor.getSession().setUseWrapMode(true);
+  editor.renderer.setPadding(25, 10);
   editor.setOptions({
     showPrintMargin: false,
     showGutter: false,

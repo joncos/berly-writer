@@ -41,6 +41,16 @@ function togglePreview(editor, $editor, $preview, $buttonPreview) {
   editor.getSession().setWrapLimitRange(null, maxWrap);
 }
 
+function documentName() {
+  var val = $('input.document-name').val();
+
+  if (!val) {
+    val = 'writer';
+  }
+
+  return val + ".md";
+}
+
 $(function() {
   var editorId = 'editor';
   var editor = initEditor(editorId);
@@ -50,7 +60,7 @@ $(function() {
 
   $('.button-download').on('click', function(event) {
     var blob = new Blob([editor.getSession().getValue()], {type: "text/plain;charset=utf-8"});
-    saveAs(blob, "writer.md");
+    saveAs(blob, documentName());
   })
 
   $('.button-preview').on('click', function(event) {

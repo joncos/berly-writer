@@ -70,7 +70,7 @@ $(function() {
 
   editor.getSession().on('change', function(event) {
     if ($preview.hasClass('visible')) {
-      updatePreview(editor, $preview);  
+      updatePreview(editor, $preview);
     }
   })
 })
